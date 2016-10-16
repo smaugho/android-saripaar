@@ -26,7 +26,7 @@ import java.lang.annotation.Target;
  * @since 2.1.0
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface Or {
     @StringRes int messageResId()   default -1;
     String message()                default "One of the rules must be valid";

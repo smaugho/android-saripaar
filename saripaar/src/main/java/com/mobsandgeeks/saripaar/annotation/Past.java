@@ -30,7 +30,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(PastRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface Past {
     @StringRes int dateFormatResId()    default -1;
     String dateFormat()                 default DateFormats.DMY;

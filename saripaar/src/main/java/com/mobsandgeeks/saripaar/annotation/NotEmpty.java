@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(NotEmptyRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface NotEmpty {
     @StringRes int emptyTextResId() default -1;
     String emptyText()              default "";

@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(ConfirmEmailRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface ConfirmEmail {
     @StringRes int messageResId()   default -1;
     String message()                default "Emails don't match";

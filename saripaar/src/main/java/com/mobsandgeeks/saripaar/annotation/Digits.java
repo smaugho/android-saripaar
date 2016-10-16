@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(DigitsRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface Digits {
     int integer();
     int fraction()                  default 2;

@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(PasswordRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface Password {
     int min()                       default 6;
     Scheme scheme()                 default Scheme.ANY;

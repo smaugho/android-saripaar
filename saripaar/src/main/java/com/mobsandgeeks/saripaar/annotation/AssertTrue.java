@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(AssertTrueRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface AssertTrue {
     @StringRes int messageResId()   default -1;
     String message()                default "Should be true";

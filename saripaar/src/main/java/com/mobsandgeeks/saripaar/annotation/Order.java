@@ -24,7 +24,7 @@ import java.lang.annotation.Target;
  * @since 2.0
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface Order {
     int value();
 }

@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(DecimalMaxRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface DecimalMax {
     double value();
 

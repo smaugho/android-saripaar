@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(DecimalMinRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface DecimalMin {
     double value();
 

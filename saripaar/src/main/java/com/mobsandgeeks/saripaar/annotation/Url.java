@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(UrlRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface Url {
     String[] schemes()              default { "http", "https", "ftp" };
     boolean allowFragments()        default true;

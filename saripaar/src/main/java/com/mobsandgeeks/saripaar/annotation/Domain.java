@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(DomainRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface Domain {
     boolean allowLocal()            default false;
 

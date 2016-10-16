@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(LengthRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface Length {
     int min()                       default 0;
     int max()                       default Integer.MAX_VALUE;

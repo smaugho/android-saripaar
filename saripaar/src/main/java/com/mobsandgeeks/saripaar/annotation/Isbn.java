@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(IsbnRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface Isbn {
     @StringRes int messageResId()   default -1;
     String message()                default "Invalid ISBN";

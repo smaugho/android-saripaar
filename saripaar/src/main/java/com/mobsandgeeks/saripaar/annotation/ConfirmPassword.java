@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  */
 @ValidateUsing(ConfirmPasswordRule.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface ConfirmPassword {
     @StringRes int messageResId()   default -1;
     String message()                default "Passwords don't match";
